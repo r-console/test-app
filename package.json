@@ -1,0 +1,50 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-log": "^4.4.8",
+    "electron-updater": "^5.2.1",
+    "react-scripts": "^5.0.1",
+    "uaup-js": "^0.0.22"
+  },
+  "devDependencies": {
+    "electron": "^20.0.3",
+    "electron-builder": "^23.3.3"
+  },
+  "build": {
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Ramesh",
+        "repo": "test-app"
+      }
+    ],
+    "extends": null,
+    "appId": "com.sreechakra.app",
+    "productName": "SCS Service Billing",
+    "target": "NSIS",
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "publish": [
+        "github"
+      ]
+    },
+    "files": [
+      "build/**/*"
+    ],
+    "nsis": {
+      "oneClick": true
+    }
+  }
+}
